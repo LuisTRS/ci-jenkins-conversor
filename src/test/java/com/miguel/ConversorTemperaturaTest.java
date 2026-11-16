@@ -18,4 +18,9 @@ public class ConversorTemperaturaTest {
         assertEquals(0.0, conversor.fahrenheitParaCelsius(32.0), 0.01);
         assertEquals(100.0, conversor.fahrenheitParaCelsius(212.0), 0.01);
     }
+    @Test
+    void deveConverterTemperaturaNegativa() {
+        ConversorTemperatura conversor = new ConversorTemperatura();
+        assertEquals(-40.0, conversor.celsiusParaFahrenheit(-40.0), 0.001);
+    }
 }
